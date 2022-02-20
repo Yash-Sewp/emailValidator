@@ -1,5 +1,7 @@
 <?php 
 
+	// Basic string check functions
+	// However used for INPUT fields
 	function is_blank($value) {
 		return !isset($value) || trim($value) === '';
 	}
@@ -36,5 +38,19 @@
 		return true;
 		}
 	}
+
+	function in_black_list($email) {
+		$domain = explode("@", $email);
+		$domain = $domain[(count($domain)-1)];
+		// TODO:: Move blacklist array out function
+		$blacklist = array('yahoo.com', 'facebook.com');
+		if (in_array($domain, $blacklist)) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+	
 
 ?>
