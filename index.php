@@ -8,6 +8,7 @@
 
 	Validator::set_database($database);
 
+	// Example List of data
 	$data = [
 		"mail@example.com"=>"Yashveer!5!5",
 		"yash@faceb.com"=>"the"
@@ -22,7 +23,7 @@
 			$res = $valid->add($email, $password);
 
 			if($res === true) {
-				echo "Saved to DB.";
+				echo "Passed password and email validation: Saved to DB.";
 			} else {
 				echo "Failed to save to DB.";
 			}
@@ -32,7 +33,6 @@
 			echo "<hr>";
 			echo $result;
 			echo "<br>";
-			echo $_SESSION['message'] ?? '';
 		}
 	}
 

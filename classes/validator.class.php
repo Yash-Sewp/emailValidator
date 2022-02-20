@@ -107,7 +107,6 @@ class Validator {
 			$this->passwordValidated = true;
 		}
 
-		//TODO: Move out of function 
 		return  "EMAIL: " . $email . "<br> <b>Email status: </b>" . $isValidEmail . "<br><br>" . "PASSWORD: " . $password . "<br> <b>Password status: </b>" . $isValidPassword;
 	}
 
