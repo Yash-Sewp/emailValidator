@@ -30,8 +30,10 @@
 		} 
 
 		if($result != "") {
+			echo "<br>";
 			echo "<hr>";
 			echo $result;
+			echo "<hr>";
 			echo "<br>";
 		}
 	}
